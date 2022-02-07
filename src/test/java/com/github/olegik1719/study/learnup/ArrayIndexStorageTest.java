@@ -57,6 +57,16 @@ public class ArrayIndexStorageTest {
     }
 
     @Test
+    void checkGet15Except() {
+        IndexOutOfBoundsException exception_minus = Assertions.assertThrows(IndexOutOfBoundsException.class,() -> AIS_15.get(-1));
+        Assertions.assertEquals("Значение индекса: " + -1 + " выходит за границы хранилища.", exception_minus.getMessage());
+        IndexOutOfBoundsException exception_out = Assertions.assertThrows(IndexOutOfBoundsException.class,() -> AIS_15.get(100));
+        Assertions.assertEquals("Значение индекса: " + 100 + " выходит за границы хранилища.", exception_out.getMessage());
+        IndexOutOfBoundsException exception_border = Assertions.assertThrows(IndexOutOfBoundsException.class,() -> AIS_15.get(15));
+        Assertions.assertEquals("Значение индекса: " + 15 + " выходит за границы хранилища.", exception_border.getMessage());
+    }
+
+    @Test
     void checkSize15() {
         Assertions.assertEquals(EXPECTED_ARRAY_SIZE_15.length, AIS_15.size());
     }
