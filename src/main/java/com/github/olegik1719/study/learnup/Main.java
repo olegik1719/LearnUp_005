@@ -15,7 +15,7 @@ public class Main {
         fillArray(array);
         //Выведите на экран
         printArray(array);
-        IndexStorage indexStorage = new IndexStorage(-1);
+        IndexStorage indexStorage = new IndexStorage(ARRAY_SIZE);
         ArrayIndexStorage arrayIndexStorage = new ArrayIndexStorage(array);
         //Переверните массив слева направо без создания вспомогательных массивов
         revertArray(array);
@@ -23,7 +23,7 @@ public class Main {
         printArray(array);
         printArray(indexStorage.reverse());
         printArray(arrayIndexStorage.reverse());
-        System.out.println(indexStorage.get(-1));
+        System.out.println(indexStorage.get(0));
     }
 
     private static void fillArray(int[] arr) {
