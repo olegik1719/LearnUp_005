@@ -77,9 +77,9 @@ class IndexStorageTest {
         Assertions.assertArrayEquals(EXPECTED_ARRAY_SIZE_15_REV, IS_15.reverse());
     }
 
-//    @Test
-//    void checkConstructorException(){
-//        IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class,() -> new IndexStorage(0));
-//        Assertions.assertEquals("Размер хранилища должен быть натуральным числом!", exception.getMessage());
-//    }
+    @Test
+    void checkConstructorException(){
+        IllegalArgumentException exception = Assertions.assertThrows(IllegalArgumentException.class,() -> new IndexStorage(0));
+        Assertions.assertEquals("Размер хранилища должен быть натуральным числом!", exception.getMessage());
+    }
 }
