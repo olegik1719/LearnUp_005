@@ -13,7 +13,7 @@ public class ArrayIndexStorage extends IndexStorage {
     public ArrayIndexStorage(int[] initial) {
         super(initial.length);
         arrayHidden = new int[size()];
-        if (size() >= 0) System.arraycopy(initial, 0, arrayHidden, 0, size());
+        System.arraycopy(initial, 0, arrayHidden, 0, size());
     }
 
     @Override
